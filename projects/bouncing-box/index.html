@@ -57,7 +57,7 @@ box.text(points);
 			// TODO 3 / 4
 
 			update = function() {
-				position = position + speed (speed * direction);
+				position = position +(speed* direction);
 				if(position > boardWidth) {
     				direction = -1;
 				}
@@ -65,7 +65,7 @@ box.text(points);
 				direction = 1;
 			}
     			box.css('left', position);
-    			box.text(points)
+    			box.text(points);
 			};
 
 
@@ -75,14 +75,14 @@ handleBoxClick = function() {
 	speed = speed + 3;
 	position = 0;
 	points = points + 1;
-}
+};
 
 
 			//this calls update every 50 milliseconds
 			setInterval(update, 50);
 			// this calls the handle handleBoxClick function every time the box is clicked on
 			box.on('click', handleBoxClick);
-		})()
+		})();
 	</script>
 </body>
 </html>
